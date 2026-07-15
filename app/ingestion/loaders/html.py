@@ -32,3 +32,7 @@ def parse_html(file_path: str):
         except Exception as e:
             logfire.error(f"❌ HTML Parse Failed: {e}")
             raise e
+
+
+# Notes : to extract website specific data, you can use BeautifulSoup to parse the HTML and extract the relevant information. You can also use libraries like Scrapy or Selenium for more complex scraping tasks.
+# can also use crawl for ai or  firecrawl for ai to extract text from html and other formats.
