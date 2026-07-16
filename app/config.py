@@ -9,9 +9,9 @@ class Settings:
     GROQ_FALLBACK_API_KEY: str = os.getenv("GROQ_FALLBACK_API_KEY")
     GORQ_MODEL = "llama-3.3-70b-versatile"
 
-    QUADRA_API_KEY: str = os.getenv("QUADRA_API_KEY")
-    QUDRANT_CLUSTER_ENDPOINT: str = os.getenv("QUDRANT_CLUSTER_ENDPOINT")
-    QUDRANT_COLLECTION = "k8_enterprise_rag"
+    QDRANT_API_KEY: str = os.getenv("QUADRA_API_KEY")
+    QDRANT_URL: str = os.getenv("QUDRANT_CLUSTER_ENDPOINT")
+    QDRANT_COLLECTION = "k8_enterprise_rag"
 
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
 
