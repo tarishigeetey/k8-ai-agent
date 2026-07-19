@@ -1,5 +1,6 @@
 import logfire
 from app.agents.state import AgentState
+from app.config import settings
 from app.gateway import portkey_client, extract_cache_status
 
 
@@ -59,7 +60,9 @@ def generate_node(state: AgentState):
     with logfire.span("✍️ LLM Synthesis"):
         try:
             response = portkey_client.chat.completions.create(
-                messages=[{"role": "user", "content": prompt}], temperature=0.1
+                model=settings.GROQ_MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.1,
             )
             content = response.choices[0].message.content
             cache_status = extract_cache_status(response)
